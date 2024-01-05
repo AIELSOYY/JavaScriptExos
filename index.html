@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Test Javascript</h1>
+    <script>
+        //Exercice 4.1
+        /*let userInput = prompt('Saisissez une phrase.')
+        if (userInput == 'Bonjour'){
+            alert("Bonjour à toi !");
+        }
+        else if (userInput == 'tu vas bien ?'){
+            alert('Bien, et toi ?');
+        }
+        else{
+            alert("Désolé, je n'ai pas compris...");
+        }*/
+        
+       //Exercice 4.2
+       /*let userInput = prompt('Saisissez une phrase.')
+        if (userInput == 'Bonjour'){
+            alert("Bonjour, ça va?");
+            let userResponse = prompt('Saisissez une réponse');
+            if(userResponse == 'oui'){
+                alert('Je suis content pour toi.');
+            }
+            else{
+                alert('Désolé, il faut que je file.')
+            }
+        }
+        else if (userInput == 'tu vas bien ?'){
+            alert('Bien, et toi ?');
+        }
+        else{
+            alert("Désolé, je n'ai pas compris...");
+        }*/
+
+        //Exercice 4.3
+        /*var vehicle = prompt('Quel véhicule?');
+        if (vehicle == 'voiture'){
+            let couleur = prompt('Quelle couleur');
+            if(couleur == 'rouge'){
+                alert('Voiture Rouge livrée dans 1 heure, soyez pret.');
+            }
+            else if(couleur == 'bleu'){
+                alert('Pas de voiture bleue disponible, dommage!');
+            }
+            else{
+                alert("Couleur n'existe pas, choisissez entre bleu et rouge");
+            }
+        }
+        else if(vehicle == 'moto'){
+            let motoSpecs = prompt('Quelles options?');
+            if(motoSpecs === "3 roues"){
+                alert('Pourquoi?');
+            }
+            else{
+                alert("J'ai menti, y'a pas d'options sur les motos en fait.");
+            }
+        }
+        else if(vehicle == 'vélo'){
+            let bikeWheels = prompt('Combien de roues?');
+            if(bikeWheels == 2){
+                alert('Bon choix.');
+            }
+            else if(bikeWheels == 1){
+                let bikeSure = prompt("T'es sûr?");
+                if(bikeSure == "oui"){
+                    alert('Cool, mais on en a plus.');
+                }
+                else{
+                    alert('Normal.');
+                }
+            }
+            else{
+                alert('Nombre de roues incorrect.');
+            }
+        }
+        else{
+            alert("Véhicule n'existe pas.")
+        }*/
+
+        //Exercice 3.1
+        /*for(let i=1; i<200; i++){
+            if(i % 3 === 0 &&  i % 5 === 0){
+                console.log('FizzBuzz');
+            }
+            else if(i % 3 === 0){
+                console.log('Fizz');
+            }
+            else if(i % 5 === 0){
+                console.log('Buzz');
+            }
+            else{
+                console.log(i);
+            }
+        }*/
+        
+        //Exercice 3.2
+        /*var randomNum = Math.round(Math.random() * 100);
+        let inputNum;
+        for(let i=0; i<10; i++){
+            inputNum = prompt('Insérez un nombre entre 0 et 100.');
+            if(inputNum == randomNum){
+                alert('Bravo !');
+                break;
+            }
+            else if(inputNum<randomNum){
+                alert('Plus grand')
+            }
+            else if(inputNum>randomNum){
+                alert('Plus petit')
+            }
+        }*/
+        
+        //Exercice 5
+        /*function diviserParDeux(number){
+            return number/2;
+        }
+        function somme(number1, number2){
+            return number1+number2;
+        }
+        function signe(number){
+            if (number > 0) {
+                return 'positif';
+            }
+            else if (number < 0){
+                return 'négatif';
+            }
+            else if (number == 0){
+                return 'nul';
+            }
+        }
+        function factorielle(number){
+            let output = 1;
+            for(let i = 1; i<=number; i++){
+                output *= i;
+            }
+            return output;
+        }*/
+
+        //Exercice 6
+        /*function comparer(choix1, choix2){ //choix1 = utilisateur, choix2 = ordinateur
+            if(choix1 == choix2){
+                return 'égalité';
+            }
+            else if(choix1 == 'pierre'){
+                if(choix2 == 'feuille'){
+                    return 'feuille';
+                }
+                else if(choix2 == 'ciseaux'){
+                    return 'pierre';
+                }
+            }
+            else if(choix1 == 'feuille'){
+                if(choix2 == 'pierre'){
+                    return 'feuille';
+                }
+                else if(choix2 == 'ciseaux'){
+                    return 'ciseaux';
+                }
+            }
+            else if(choix1 == 'ciseaux'){
+                if(choix2 == 'papier'){
+                    return 'ciseaux';
+                }
+                else if(choix2 == 'pierre'){
+                    return 'pierre';
+                }
+            }
+        }
+        var compChoice=0, playerScore=0, compScore=0;
+        var playerChoice, compResult;
+        for(let i=0;i<3;i++){
+            compChoice = Math.round(Math.random() * 2);
+            if(compChoice == 0){
+                compChoice = 'pierre';
+            }
+            else if(compChoice == 1){
+                compChoice = 'feuille';
+            }
+            else{
+                compChoice = 'ciseaux';
+            }
+            playerChoice = prompt('pierre, feuille, ciseaux');
+            compResult = comparer(playerChoice,compChoice);
+            if(compResult=='égalité'){
+                console.log('égalité');
+            }
+            else if(compResult==compChoice){
+                console.log(compChoice);
+                compScore++;
+            }
+            else if(compResult==playerChoice){
+                console.log(playerChoice);
+                playerScore++;
+            }
+        }
+        if(playerScore == compScore){
+            alert('aucun');
+        }
+        else if(compScore>playerScore){
+            alert('ordi');
+        }
+        else{
+            alert('joueur');
+        }*/
+
+        //Exercice 7.1
+        /*var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
+        let spliced, customerChoiceIndex;
+        function displayFruitArray(fruitArray){
+            let output ='Les fruits disponibles sont : ';
+            for (var i in fruitArray) {
+                if(i==fruitArray.length-1){
+                    output += fruitArray[i] + ".";
+                }
+                else{
+                    output += fruitArray[i] +', ';
+                }
+            }
+            return output;
+        }
+        alert(displayFruitArray(fruits));
+        let customerChoice = prompt('Quel fruits désirez-vous acheter?');
+        customerChoiceIndex = fruits.indexOf(customerChoice);
+        if(customerChoiceIndex != -1){
+            spliced = fruits.splice(customerChoiceIndex , 1);
+            alert('ok!');
+        }
+        else{
+            alert('indisponible...');
+        }
+        alert(displayFruitArray(fruits));*/
+
+        //Exercice 7.2
+        /*var mauvaisesLettres = [ ];
+        var lettresAttendues = [ 's', 'u', 'p', 'e', 'r', 'r' ];
+        let limitLoop = lettresAttendues.length+11;
+        var displayMessage, lettreUser, foundLetters;
+
+        for(let i = 0; mauvaisesLettres.length!=10 && lettresAttendues.length!=0 ; i++){
+            displayMessage= 'Il reste encore ' + lettresAttendues.length.toString() + ' lettres à trouver et ' + (10-mauvaisesLettres.length).toString() +' tentatives restantes';
+            alert(displayMessage);
+            lettreUser = prompt("Entrez une lettre");
+            lettreIndex = lettresAttendues.indexOf(lettreUser);
+            if(lettreIndex == -1){
+                alert('Dommage!');
+                mauvaisesLettres.push(lettreUser);
+            }
+            else{
+                foundLetters=0;
+                while(lettreIndex != -1){
+                    lettresAttendues.splice(lettreIndex, 1);
+                    foundLetters++;
+                    lettreIndex = lettresAttendues.indexOf(lettreUser);
+                }
+                alert('Vous avez trouvé ' + foundLetters.toString() + ' lettre(s)!')
+            }
+            if(i==limitLoop){ //Mesure anti-'loop infini'
+                alert('loop error');
+                break;
+            }
+        }
+        if(mauvaisesLettres.length==10){
+            alert('perdu!');
+        }
+        else if(lettresAttendues.length==0){
+            alert('bravo!')
+        }*/
+
+        //Exercice 8.1
+        var annuaire = {
+            patricia: '06 66 66 66 66',
+            david: '07 77 77 77 77',
+        };
+        let commandInput;
+        for(let i = 0; commandInput!='q'; i++){
+            commandInput = prompt("Selectionnez une commande: 'r' pour rechercher, 'l' pour la liste, 'a' pour ajouter, 's' pour supprimer et 'q' pour quitter");
+            if(commandInput == 'r'){
+                let namePrompt = prompt('Saisissez un prénom');
+                alert(annuaire[namePrompt]);
+            }
+            if(commandInput == 'l'){
+                for(var key in annuaire){
+                    console.log(key + ': ' + annuaire[key]);
+                }
+            }
+            if(commandInput == 'a'){
+                let namePrompt = prompt('Saisissez un prénom');
+                let numberPrompt = prompt('Saisissez un numéro sous le format XX XX XX XX XX');
+                annuaire[namePrompt] = numberPrompt;
+                
+            }
+            if(commandInput == 's'){
+                let namePrompt = prompt('Saisissez un prénom');
+                delete annuaire[namePrompt];
+                alert('Contact ' + namePrompt + ' supprimé.')
+            }
+        }
+    </script>
+</body>
+</html>
